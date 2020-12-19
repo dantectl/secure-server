@@ -25,6 +25,8 @@ reference - [timedatectl](https://www.freedesktop.org/software/systemd/man/timed
 ```
 sed -i -e 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 sed -i -e 's/PermitRootLogin yes/PermitRootLogin no/g' /etc/ssh/sshd_config
+
+# this command changes the default ssh port, you may delete this line if you want to keep port 22
 sed -i -e 's/#Port 22/Port <your-preferred-port-number>/g' /etc/ssh/sshd_config
 sudo systemctl restart sshd -y
 sudo service ssh restart -y
