@@ -75,7 +75,7 @@ sudo systemctl restart sshd -y
 sudo service ssh restart -y
 ufw enable
 ufw logging on
-ufw allow 831
+ufw allow <uncommon-port-number>
 adduser <user>
 adduser <user> sudo
 su - <user> bash -c 'mkdir -p ~/.ssh && chmod -R 700 ~/.ssh/'
